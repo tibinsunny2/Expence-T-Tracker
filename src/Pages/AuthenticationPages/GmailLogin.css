@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+  }
+  
+  .secondContainer {
+    width: 700px;
+    height: fit-content;
+    padding: 60px;
+    
+  }
+  .wrapper {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px 30px #888888;;
+  }
+  .HeaderContainer {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    width: 150px;
+  }
+  .hedding1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .input1{
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+     box-shadow: 5px 5px 10px #888888;;
+  }
+  .buttonContainer {
+    width: inherit;
+    padding: 20px;
+   
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+  .red1{
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      margin-right: 20%;
+      background-color: rgb(26, 18, 238);
+      box-shadow: 7px 5px 10px #888888;
+  }
+  
