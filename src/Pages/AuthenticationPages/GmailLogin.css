@@ -42,6 +42,9 @@
     margin: 20px;
      box-shadow: 5px 5px 10px #888888;;
   }
+  .input1:hover{
+    background-color: red;
+  }
   .buttonContainer {
     width: inherit;
     padding: 20px;
@@ -50,6 +53,19 @@
     align-items: end;
     justify-content: end;
   }
+  button{
+    background-color: var(--color-blue);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+  } 
+  button:hover{
+    background-color: var(--color-green);
+  }
+  
   .red1{
       padding: 10px;
       border: none;

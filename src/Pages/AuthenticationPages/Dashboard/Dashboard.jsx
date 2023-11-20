@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import GooglePieChart from "../../Components/BarChart/Barchart";
-import GoogleBarChart3D from "../../Components/PieChart/GoogleBarChart";
-import Table from "../../Components/Tables/Table";
+import GooglePieChart from "../../../Components/BarChart/Barchart";
+import GoogleBarChart3D from "../../../Components/PieChart/GoogleBarChart";
+import Table from "../../../Components/Tables/Table";
 
 function Dashboard() {
   const Container = styled.div`
@@ -24,17 +24,19 @@ function Dashboard() {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
   `;
   const SecondContainer = styled.div`
     overflow-y: scroll;
     background-color: lightblue;
+    padding: 10px;
   `;
   const FirstSubContainer1 = styled.div`
-   background-color: lightblue;
+    background-color: lightblue;
   `;
   const FirstSubContainer2 = styled.div`
     width: 100%;
-    background-color: var(  --color-green);
+    background-color: var(--color-green);
   `;
   const PieChartContainer = styled.div`
     width: 100%;
@@ -64,7 +66,7 @@ function Dashboard() {
             </FirstSubContainer1>
             <FirstSubContainer2>
               <PieChartContainer>
-                <GooglePieChart/>
+                <GooglePieChart />
               </PieChartContainer>
             </FirstSubContainer2>
           </FirstContainer>

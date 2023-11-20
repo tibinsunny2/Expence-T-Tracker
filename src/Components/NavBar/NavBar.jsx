@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Expencelogo from "../Images/Navbar/expencelogo4.png";
-import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
-import SupportIcon from '@mui/icons-material/Support';
-import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
-import ShareIcon from '@mui/icons-material/Share';
-import LanguageIcon from '@mui/icons-material/Language';
+import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
+import SupportIcon from "@mui/icons-material/Support";
+import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
+import ShareIcon from "@mui/icons-material/Share";
+import LanguageIcon from "@mui/icons-material/Language";
 
 function NavBar() {
   const Container = styled.div`
@@ -30,12 +30,10 @@ function NavBar() {
     align-items: center;
   `;
   const SecondContainer = styled.div`
-  width: 100%;
+    width: 100%;
     display: flex;
     justify-content: right;
     align-items: center;
-    
-   
   `;
   const IconContainer = styled.div`
     width: fit-content;
@@ -47,8 +45,8 @@ function NavBar() {
     justify-content: center;
   `;
   const Icon = styled.img`
-    width: relative;
-    height: 10vh;
+    width: auto;
+    height: 8vh;
   `;
   const IconDesc = styled.h3`
     margin: 5px;
@@ -56,24 +54,23 @@ function NavBar() {
   `;
   const HelpIcon = styled.div``;
   const HelpDesc = styled.div`
-  margin-left: 15px;
+    margin-left: 15px;
   `;
   const FirstMenuContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
   `;
   const Item = styled.div`
-  display: flex;
-  margin: 10px;
-  align-items: center;
-  cursor: pointer;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    cursor: pointer;
   `;
-    const SecondMenuContainer=styled.div`
-     display: flex;
-
-    `
+  const SecondMenuContainer = styled.div`
+    display: flex;
+  `;
   return (
     <Container>
       <Wrapper>
@@ -84,11 +81,15 @@ function NavBar() {
           <IconDesc>Money Tracker</IconDesc>
           <FirstMenuContainer>
             <Item>
-              <HelpIcon><SupportIcon/></HelpIcon>
+              <HelpIcon>
+                <SupportIcon />
+              </HelpIcon>
               <HelpDesc>Help?</HelpDesc>
             </Item>
             <Item>
-              <HelpIcon><DocumentScannerIcon/></HelpIcon>
+              <HelpIcon>
+                <DocumentScannerIcon />
+              </HelpIcon>
               <HelpDesc>About us</HelpDesc>
             </Item>
             <Item>
@@ -98,19 +99,25 @@ function NavBar() {
           </FirstMenuContainer>
         </FirstContainer>
         <SecondContainer>
-        <SecondMenuContainer>
-        <Item>
-              <HelpIcon><LanguageIcon/></HelpIcon>
+          <SecondMenuContainer>
+            <Item>
+              <HelpIcon>
+                <LanguageIcon />
+              </HelpIcon>
               <HelpDesc>EN</HelpDesc>
             </Item>
             <Item>
-              <HelpIcon><LocalPrintshopIcon/></HelpIcon>
+              <HelpIcon>
+                <LocalPrintshopIcon />
+              </HelpIcon>
             </Item>
             <Item>
-              <HelpIcon><ShareIcon/></HelpIcon>
+              <HelpIcon>
+                <ShareIcon />
+              </HelpIcon>
               <HelpDesc></HelpDesc>
             </Item>
-        </SecondMenuContainer>
+          </SecondMenuContainer>
         </SecondContainer>
       </Wrapper>
     </Container>

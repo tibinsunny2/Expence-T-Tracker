@@ -9,11 +9,13 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import LogoutIcon from "@mui/icons-material/Logout";
 import Dp from "../Images/Navbar/dp.jpg";
+import Lock from '../Images/Navbar/lock.png'
 import './Sidebar.css'
 function Sidebar() {
   const Container = styled.div`
     height: 100%;
     width: 100%;
+    background-color: lightblue;
   `;
   const Wrapper = styled.div`
     height: 100%;
@@ -21,15 +23,29 @@ function Sidebar() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+background-color: lightblue;
   `;
-  const UserContainer = styled.div``;
+  const Parent=styled.div`
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+background-color: lightblue;
+  `
+  const UserContainer = styled.div`
+   background-color: lightblue;`;
   const UserDp = styled.img`
     width: 100px;
     border-radius: 50%;
     height: fit-content;
+   
+  
   `;
-  const DpContainer = styled.div``;
-  const UserName = styled.div``;
+  const DpContainer = styled.div`
+   background-color: lightblue;`;
+  const UserName = styled.div`
+   background-color: lightblue;`;
   const FirstContainer = styled.ul`
     padding: 60px;
   `;
@@ -40,6 +56,8 @@ function Sidebar() {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    
+   
   `;
   const ItemContainer = styled.li`
     display: flex;
@@ -49,12 +67,19 @@ function Sidebar() {
     margin-right: 8px;
   `;
   const location = useLocation();
+const AccessToken=localStorage.getItem('accessToken')
+  const LocClear=()=>{
+    localStorage.clear()
+    window.location.reload();
+  }
   return (
     <Container>
       <Wrapper>
-        <UserContainer>
+      {
+        !AccessToken?<UserDp src={Lock}/>:<Parent>
+            <UserContainer>
           <DpContainer>
-            <UserDp src={Dp} />
+            <UserDp src={Dp}/>
           </DpContainer>
           <UserName>Username</UserName>
         </UserContainer>
@@ -137,9 +162,11 @@ function Sidebar() {
             <ItemIcon>
               <LogoutIcon />
             </ItemIcon>
-            <Link style={{"textDecoration":"none"}}>Logout</Link>
+            <Link style={{"textDecoration":"none"}} onClick={LocClear}>Logout</Link>
           </ItemContainer>
         </SecondContainer>
+        </Parent>
+      }
       </Wrapper>
     </Container>
   );

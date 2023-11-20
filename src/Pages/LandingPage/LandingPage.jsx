@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import GmailLogin from "../AuthenticationPages/GmailLogin";
+import GmailSignUp from "../AuthenticationPages/GmailSignUp";
 function LandingPage() {
   const Container = styled.div`
     width: 100%;
@@ -22,12 +23,16 @@ function LandingPage() {
   const Terms=styled.div`
     
   `
+  const ToggleToken=localStorage.getItem("ToggleToken")
   return (
     <Container>
       <Wrapper>
         <Page>
-          <GmailLogin />
-          {/* <TermsContainer>
+          {
+            ToggleToken==="true"?<GmailSignUp/>:<GmailLogin/>
+          }
+        
+          <TermsContainer>
             <Terms>
               We’re constantly developing new technologies and features to
               improve our services. For example, we use artificial intelligence
@@ -41,7 +46,7 @@ function LandingPage() {
               a new version or feature is available. Some services let you
               adjust your automatic update settings.
             </Terms>
-          </TermsContainer> */}
+          </TermsContainer>
         </Page>
       </Wrapper>
     </Container>
